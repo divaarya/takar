@@ -1,0 +1,104 @@
+.hero {
+  padding: 72px 0 96px;
+}
+.hero h1 {
+  font-size: clamp(52px, 9.2vw, 132px);
+  line-height: 0.94;
+  max-width: 9.5em;
+}
+.hero-bawah {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  margin-top: 56px;
+  align-items: end;
+}
+.hero-desk {
+  font-size: 20px;
+  color: var(--abu);
+  max-width: 30em;
+}
+.hero-aksi {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.blok {
+  background: var(--putih);
+  border: 2px solid var(--aksen);
+  position: relative;
+}
+.blok::before,
+.blok::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--utama);
+}
+.blok::before {
+  left: -10px;
+  top: -10px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.blok::after {
+  right: -10px;
+  bottom: -10px;
+  border-left: 0;
+  border-top: 0;
+}
+.blok-kepala {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background: var(--aksen);
+  color: #fff;
+}
+.blok-baris {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 14px;
+  padding: 16px 18px;
+  border-top: 2px solid var(--aksen);
+  align-items: center;
+}
+.blok-kepala + .blok-baris {
+  border-top: 0;
+}
+.blok-baris b {
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.blok-baris .siap {
+  color: var(--ok);
+}
+.meter {
+  grid-column: 1 / -1;
+  height: 10px;
+  border: 2px solid var(--aksen);
+}
+.meter i {
+  display: block;
+  height: 100%;
+  width: 95%;
+  background: var(--utama);
+  transform-origin: left;
+  animation: isi 1.4s 0.3s ease-out backwards;
+}
+@keyframes isi {
+  from {
+    transform: scaleX(0);
+  }
+}
+@media (max-width: 860px) {
+  .hero {
+    padding: 44px 0 64px;
+  }
+  .hero-bawah {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 36px;
+  }
+}

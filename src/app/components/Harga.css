@@ -1,0 +1,92 @@
+.periode {
+  display: inline-flex;
+  border: 2px solid var(--aksen);
+  margin-bottom: 30px;
+}
+.periode button {
+  border: 0;
+  background: var(--putih);
+  padding: 10px 20px;
+  font:
+    700 15px var(--font-sans),
+    sans-serif;
+  color: var(--aksen);
+  cursor: pointer;
+}
+.periode button[aria-pressed="true"] {
+  background: var(--aksen);
+  color: #fff;
+}
+.paket {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.kartu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: var(--kertas);
+  border: 2px solid var(--aksen);
+}
+.kartu.populer {
+  background: var(--putih);
+  box-shadow: 8px 8px 0 var(--utama);
+}
+.lencana {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  background: var(--utama);
+  border: 2px solid var(--aksen);
+  padding: 2px 10px;
+}
+.kartu h3 {
+  font-size: 30px;
+}
+.batas {
+  color: var(--abu);
+}
+.angka {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.angka small {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--abu);
+  letter-spacing: 0;
+  margin-top: 4px;
+}
+.kartu ul {
+  list-style: none;
+  margin: 4px 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  flex: 1;
+}
+.kartu li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.kartu li svg {
+  flex: none;
+  margin-top: 4px;
+  color: var(--utama);
+}
+.kartu .btn {
+  text-align: center;
+}
+@media (max-width: 860px) {
+  .paket {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,39 @@
+.kutipan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.kutipan figure {
+  margin: 0;
+  background: var(--putih);
+  border: 2px solid var(--aksen);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 26px;
+}
+.kutipan figure:nth-child(2) {
+  transform: translateY(22px);
+}
+.kutipan blockquote {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.kutipan figcaption b,
+.kutipan figcaption span {
+  display: block;
+}
+.kutipan figcaption span {
+  color: var(--abu);
+}
+@media (max-width: 860px) {
+  .kutipan {
+    grid-template-columns: 1fr;
+  }
+  .kutipan figure:nth-child(2) {
+    transform: none;
+  }
+}

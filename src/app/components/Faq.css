@@ -1,0 +1,85 @@
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 56px;
+  align-items: start;
+}
+.faq-kiri {
+  position: sticky;
+  top: 100px;
+}
+.faq-kiri h2 {
+  font-size: clamp(34px, 4.6vw, 56px);
+}
+.faq-desk {
+  margin-top: 18px;
+  color: var(--abu);
+  font-size: 18px;
+  max-width: 24em;
+}
+.faq-tanya {
+  margin-top: 32px;
+  padding: 22px;
+  background: var(--putih);
+  border: 2px solid var(--aksen);
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+.faq-tanya b {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.faq-tanya p {
+  color: var(--abu);
+  font-size: 16px;
+}
+.faq-tanya .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+details {
+  border-top: 2px solid var(--aksen);
+  padding: 20px 0;
+}
+details:last-child {
+  border-bottom: 2px solid var(--aksen);
+}
+summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::after {
+  content: "+";
+  font-size: 28px;
+  line-height: 1;
+  color: var(--utama);
+}
+details[open] summary::after {
+  content: "–";
+}
+details p {
+  margin-top: 12px;
+  color: var(--abu);
+  max-width: 38em;
+}
+@media (max-width: 860px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .faq-kiri {
+    position: static;
+  }
+}

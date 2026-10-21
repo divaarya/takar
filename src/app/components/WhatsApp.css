@@ -1,0 +1,18 @@
+.wa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  background: var(--utama);
+  color: var(--aksen);
+  border: 2px solid var(--aksen);
+  box-shadow: 4px 4px 0 var(--aksen);
+  transition: transform 0.15s;
+}
+.wa:hover {
+  transform: translate(-2px, -2px);
+}

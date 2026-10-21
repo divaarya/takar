@@ -1,0 +1,32 @@
+.kelebihan {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid var(--aksen);
+}
+.kelebihan article {
+  padding: 34px 34px 38px 0;
+  border-bottom: 2px solid var(--aksen);
+}
+.kelebihan article:nth-child(even) {
+  padding-left: 34px;
+  border-left: 2px solid var(--aksen);
+  padding-right: 0;
+}
+.kelebihan h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.kelebihan p {
+  color: var(--abu);
+  max-width: 26em;
+}
+@media (max-width: 760px) {
+  .kelebihan {
+    grid-template-columns: 1fr;
+  }
+  .kelebihan article,
+  .kelebihan article:nth-child(even) {
+    padding: 26px 0;
+    border-left: 0;
+  }
+}

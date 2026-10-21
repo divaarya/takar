@@ -1,0 +1,127 @@
+.fitur-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  border: 2px solid var(--aksen);
+}
+.tab-daftar {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid var(--aksen);
+}
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 22px;
+  background: var(--kertas);
+  border: 0;
+  border-bottom: 2px solid var(--aksen);
+  font:
+    700 18px var(--font-sans),
+    sans-serif;
+  color: var(--aksen);
+  cursor: pointer;
+  text-align: left;
+}
+.tab:last-child {
+  border-bottom: 0;
+}
+.tab[aria-selected="true"] {
+  background: var(--utama);
+}
+.tab:hover:not([aria-selected="true"]) {
+  background: var(--garis);
+}
+.panel {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  padding: 36px;
+  animation: muncul 0.35s ease-out;
+}
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.panel h3 {
+  font-size: 34px;
+}
+.panel-desk {
+  color: var(--abu);
+  margin: 14px 0 22px;
+}
+.poin {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.poin li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 500;
+}
+.poin svg {
+  flex: none;
+  margin-top: 4px;
+  color: var(--utama);
+}
+.contoh {
+  border: 2px solid var(--aksen);
+  align-self: start;
+  background: var(--kertas);
+}
+.contoh-kepala {
+  background: var(--aksen);
+  color: #fff;
+  padding: 10px 16px;
+}
+.contoh-baris {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--garis);
+  background: var(--putih);
+}
+.contoh-baris:first-of-type {
+  border-top: 0;
+}
+.contoh-baris b,
+.contoh-baris span {
+  display: block;
+}
+.contoh-baris span {
+  color: var(--abu);
+}
+.contoh-baris em {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .fitur-grid {
+    grid-template-columns: 1fr;
+  }
+  .tab-daftar {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: 0;
+    border-bottom: 2px solid var(--aksen);
+  }
+  .tab {
+    border-bottom: 0;
+    border-right: 2px solid var(--aksen);
+    white-space: nowrap;
+  }
+  .panel {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 28px;
+  }
+}

@@ -1,0 +1,38 @@
+.langkah {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.langkah li {
+  position: relative;
+  padding-top: 30px;
+  border-top: 2px solid var(--aksen);
+}
+.nomor {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--utama);
+  border: 2px solid var(--aksen);
+  font-weight: 800;
+}
+.langkah h3 {
+  font-size: 26px;
+  margin: 10px 0;
+}
+.langkah p {
+  color: var(--abu);
+}
+@media (max-width: 860px) {
+  .langkah {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}

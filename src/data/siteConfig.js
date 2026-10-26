@@ -17,6 +17,6 @@ export const siteConfig = {
     metaTitle: "Takar - HRIS Absensi, Gaji, Exam, Library, dan Perizinan",
     metaDescription:
       "Kelola absensi, gaji, exam, library, dan perizinan karyawan dalam satu sistem HRIS yang rapi dan terukur.",
-    ogImage: "",
+    ogImage: "/takar.png",
   },
 };
